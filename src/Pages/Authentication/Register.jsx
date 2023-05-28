@@ -58,6 +58,8 @@ const Register = () => {
     signInWithGoogle(provider)
       .then((result) => {
         const user = result.user;
+        toast.success("Sign Up Successfully");
+        navigate("/");
       })
       .catch((e) => console.log(e));
   };
