@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <div>
-      <header id="title" class="bg-[#263A29] text-white font-bold body-font">
+      <header id="title" class="bg-[#96b6fa] text-white font-bold body-font">
         <div class="container max-w-screen-xl mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link
             to={"/"}
@@ -60,7 +60,7 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-[#263A29] rounded-box w-52"
+              className="dropdown-content menu p-2 shadow bg-[#f5a623] rounded w-52"
             >
               {user ? (
                 <>

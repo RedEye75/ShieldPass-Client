@@ -20,17 +20,19 @@ const Banner = () => {
           </div>
           <div className="mt-56 text-start">
             <h1 id="title" className="text-6xl font-extrabold">
-              Unleash Secure Freedom <br /> with Shieldpass
+              Unleash Secure Freedom <br /> with{" "}
+              <span className="text-[#f5a623]">ShieldPass</span>
               <br />
             </h1>
-            <p className="mt-8 font-bold text-2xl">
-              Your Trusted Password Manager
+            <p className="mt-8 font-bold text-xl">
+              Your Trusted Password Manager . <br /> Protecting Your Passwords,
+              Preserving Your Peace
             </p>
             <div className="mt-10">
               {user?.uid ? (
                 <>
                   <Link to={"/"}>
-                    <button className="bg-blue-700 text-white px-10 rounded text-lg font-bold py-4">
+                    <button className="bg-[#96b6fa] text-white px-10 rounded text-lg font-bold py-4">
                       Get started
                     </button>
                   </Link>
@@ -38,7 +40,7 @@ const Banner = () => {
               ) : (
                 <>
                   <Link to={"/login"}>
-                    <button className="bg-blue-700 text-white px-10 rounded text-lg font-bold py-4">
+                    <button className="bg-[#96b6fa] text-white px-10 rounded text-lg font-bold py-4">
                       Get started
                     </button>
                   </Link>
