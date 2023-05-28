@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { authContext } from "../../Context/AuthProvider";
+import noUser from "../../../src/Assets/no user.png";
 
 const Header = () => {
+  const { user } = useContext(authContext);
   return (
     <div>
       <header id="title" class="bg-[#263A29] text-white font-bold body-font">
@@ -31,15 +34,27 @@ const Header = () => {
 
           <div className="dropdown dropdown-bottom">
             <label tabIndex={0} className=" m-1">
-              <div className="avatar">
-                <div className="w-12">
-                  <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>
-              </div>
+              {user?.uid ? (
+                <>
+                  <div className="avatar">
+                    <div className="w-12 h-12 rounded-full">
+                      <img alt="userProfile" src={user?.photoURL} />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="avatar">
+                    <div className="w-12 h-12 rounded-full">
+                      <img alt="userProfile" src={noUser} />
+                    </div>
+                  </div>
+                </>
+              )}
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+              className="dropdown-content menu p-2 shadow bg-blue-500 rounded-box w-52"
             >
               <li>
                 <NavLink to={"/login"}>Login</NavLink>

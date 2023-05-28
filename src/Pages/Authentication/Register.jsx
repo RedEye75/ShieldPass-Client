@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../Context/AuthProvider";
 import { toast } from "react-hot-toast";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Register = () => {
-  const { createUser, updateUserProfile } = useContext(authContext);
+  const { createUser, signInWithGoogle, updateUserProfile } =
+    useContext(authContext);
 
   const navigate = useNavigate();
 
@@ -46,6 +48,16 @@ const Register = () => {
       .then(() => {
         toast.success("Registration Successful");
         navigate("/");
+      })
+      .catch((e) => console.log(e));
+  };
+
+  const provider = new GoogleAuthProvider();
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle(provider)
+      .then((result) => {
+        const user = result.user;
       })
       .catch((e) => console.log(e));
   };
@@ -231,7 +243,7 @@ const Register = () => {
                   <p className="text-center font-semibold mx-4 mb-0">Or</p>
                 </div>{" "}
                 <button
-                  // onClick={handleGoogleSignIn}
+                  onClick={handleGoogleSignIn}
                   className="btn btn-outline w-full  font-bold rounded-none "
                 >
                   Continue with Google
