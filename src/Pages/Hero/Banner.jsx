@@ -24,6 +24,13 @@ const Banner = () => {
               <span className="text-[#f5a623]">ShieldPass</span>
               <br />
             </h1>
+            {/* <p className="mt-8 font-bold text-xl">
+              Join the Shieldpass community and experience the peace of mind
+              that comes with robust password protection. Take charge of your
+              digital security and unlock a world of convenience without
+              sacrificing safety. Shieldpass is here to shield your passwords
+              and fortify your online presence.
+            </p> */}
             <p className="mt-8 font-bold text-xl">
               Your Trusted Password Manager . <br /> Protecting Your Passwords,
               Preserving Your Peace
@@ -32,7 +39,7 @@ const Banner = () => {
               {user?.uid ? (
                 <>
                   <Link to={"/"}>
-                    <button className="bg-[#96b6fa] text-white px-10 rounded text-lg font-bold py-4">
+                    <button className="bg-[#1d137e] text-white px-10 rounded text-lg font-bold py-4">
                       Get started
                     </button>
                   </Link>
@@ -40,7 +47,7 @@ const Banner = () => {
               ) : (
                 <>
                   <Link to={"/login"}>
-                    <button className="bg-[#96b6fa] text-white px-10 rounded text-lg font-bold py-4">
+                    <button className="bg-[#1d137e] text-white px-10 rounded text-lg font-bold py-4">
                       Get started
                     </button>
                   </Link>

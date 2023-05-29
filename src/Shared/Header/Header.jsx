@@ -24,18 +24,58 @@ const Header = () => {
             </span>
           </Link>
           <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <NavLink to={"/"} className="mr-5">
-              Home
-            </NavLink>
-            <NavLink to={"/about"} className="mr-5">
-              About
-            </NavLink>
-            <NavLink to={"/myPass"} className="mr-5">
-              MyPasses
-            </NavLink>
-            <NavLink to={"/contact"} className="mr-5">
-              Contact
-            </NavLink>
+            {user ? (
+              <>
+                <NavLink to={"/"} className="mr-5">
+                  Home
+                </NavLink>
+                <NavLink to={"/about"} className="mr-5">
+                  About
+                </NavLink>
+                <NavLink to={"/dashboard"} className="mr-5">
+                  Dashboard
+                </NavLink>
+                {/* <NavLink className="mr-5">
+                  <div className="dropdown">
+                    <label tabIndex={0} className=" m-1">
+                      Dashboard
+                    </label>
+                    <ul
+                      tabIndex={0}
+                      className="dropdown-content menu p-2 shadow bg-[#f5a623] rounded-box w-52"
+                    >
+                      <li>
+                        <NavLink to={"/dashboard/addPassword"}>
+                          Add Password
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={"/dashboard/myPasswords"}>
+                          My Passes
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
+                </NavLink> */}
+
+                <NavLink to={"/contact"} className="mr-5">
+                  Contact
+                </NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink to={"/"} className="mr-5">
+                  Home
+                </NavLink>
+                <NavLink to={"/about"} className="mr-5">
+                  About
+                </NavLink>
+
+                <NavLink to={"/contact"} className="mr-5">
+                  Contact
+                </NavLink>
+              </>
+            )}
           </nav>
 
           <div className="dropdown dropdown-bottom">
