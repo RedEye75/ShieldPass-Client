@@ -39,7 +39,7 @@ const Banner = () => {
               {user?.uid ? (
                 <>
                   <Link to={"/dashboard/addPassword"}>
-                    <button className="bg-[#1d137e] text-white px-10 rounded text-lg font-bold py-4">
+                    <button className="btn btn-outline rounded-none text-lg font-bold ">
                       Get started
                     </button>
                   </Link>
