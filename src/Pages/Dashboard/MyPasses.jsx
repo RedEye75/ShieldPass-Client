@@ -23,28 +23,21 @@ const MyPasses = () => {
   return (
     <div>
       <body>
-        <div class="grid lg:grid-cols-2 grid-cols-1  min-h-screen">
-          <div>
+        <div class="grid lg:grid-cols-2 grid-cols-1 max-w-screen-xl mx-auto min-h-screen">
+          <div className="lg:w-2/3  mx-auto lg:mt-0 mt-52">
             <lottie-player
-              src="https://assets8.lottiefiles.com/packages/lf20_z3pnisgt.json"
+              src="https://assets4.lottiefiles.com/packages/lf20_jmtf164z.json"
               speed="1"
               loop
               autoplay
               background="transparent"
             ></lottie-player>
           </div>
-          <div class="mt-40  rounded-xl">
-            <div id="title" class="font-bold text-start text-4xl">
-              KeyVault
-            </div>
-            <div class="font-semibold text-start mt-3 text-xl">
-              Centralized Password Management Hub
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-5 grid-cols-1 mt-10">
+          <div class="lg:mt-48 mt-10 rounded-xl">
+            <div class="grid lg:grid-cols-2 gap-5 grid-cols-1 mb-10 mt-10">
               {myPasswords.map((password) => {
                 return (
-                  <div>
+                  <div className="border border-blue-400 p-7 bg-blue-50">
                     <div className="text-start">
                       <div id="title" class="text-xl font-bold">
                         {password?.category}
@@ -58,6 +51,13 @@ const MyPasses = () => {
                   </div>
                 );
               })}
+              {myPasswords.length === 0 && (
+                <>
+                  <p className="text-3xl font-bold text-red-700">
+                    You have no saved passes.
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>

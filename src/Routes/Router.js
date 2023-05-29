@@ -3,8 +3,9 @@ import Main from "../Layouts/Main";
 import About from "../Pages/About/About";
 import Login from "../Pages/Authentication/Login";
 import Register from "../Pages/Authentication/Register";
-import ContactUs from "../Pages/Contact/ContactUs";
+import Contact from "../Pages/Contact/Contact";
 import AddPassword from "../Pages/Dashboard/AddPassword";
+import LandingPage from "../Pages/Dashboard/LandingPage";
 import MyPasses from "../Pages/Dashboard/MyPasses";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <ContactUs />,
+        element: <Contact />,
       },
       {
         path: "/login",
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      // {
+      //   path: "/dashboard",
+      //   element: <LandingPage />,
+      // },
     ],
   },
   {

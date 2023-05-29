@@ -18,7 +18,7 @@ const Banner = () => {
               autoplay
             ></lottie-player>
           </div>
-          <div className="mt-56 text-start">
+          <div className="lg:mt-56 text-center lg:text-start">
             <h1 id="title" className="text-6xl font-extrabold">
               Unleash Secure Freedom <br /> with{" "}
               <span className="text-[#f5a623]">ShieldPass</span>
@@ -38,7 +38,7 @@ const Banner = () => {
             <div className="mt-10">
               {user?.uid ? (
                 <>
-                  <Link to={"/"}>
+                  <Link to={"/dashboard/addPassword"}>
                     <button className="bg-[#1d137e] text-white px-10 rounded text-lg font-bold py-4">
                       Get started
                     </button>

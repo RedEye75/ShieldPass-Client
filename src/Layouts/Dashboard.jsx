@@ -24,13 +24,13 @@ const Dashboard = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-60 space-y-2 border-r border-black text-base-content">
-            <li id="title " className="font-bold">
+            <li id="title" className="font-bold">
               <NavLink to={"/dashboard/addPassword"}>
                 <BsDatabaseFillAdd />
                 Add Password
               </NavLink>
             </li>
-            <li id="title " className="font-bold">
+            <li id="title" className="font-bold">
               <NavLink to={"/dashboard/myPasswords"}>
                 <RiLockPasswordFill />
                 My Passes
